@@ -8,5 +8,8 @@
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
       @endif
     </nav>
+    <div class="menu-burger">
+      <img src="@asset('images/menu-icon.svg')" alt="">
+    </div>
   </div>
 </header>
