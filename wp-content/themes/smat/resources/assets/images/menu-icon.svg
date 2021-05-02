@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="49" height="33" viewBox="0 0 49 33">
+  <g id="menu-icon" transform="translate(-42 -22)">
+    <g id="Rectangle_10" data-name="Rectangle 10" transform="translate(42 22)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="49" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="48" fill="none"/>
+    </g>
+    <g id="Rectangle_11" data-name="Rectangle 11" transform="translate(42 38)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="49" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="48" fill="none"/>
+    </g>
+    <g id="Rectangle_12" data-name="Rectangle 12" transform="translate(42 54)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="49" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="48" fill="none"/>
+    </g>
+  </g>
+</svg>

@@ -14,7 +14,25 @@
     justify-content: space-between;
     align-items: center;
     nav {
-      border-bottom: 1px solid;
+      border-bottom: 1px solid $grey;
+      @media (max-width: $tablet) { 
+        display: none;
+      }
+      .menu-smat-container {
+        ul {
+          li {
+            a {
+              padding: 24px 50px;
+              color: $grey;
+              &:hover {
+                background-color: #EEEEEE;
+              }
+            }
+            
+          }
+
+        }
+      }
     }
   }
 }
