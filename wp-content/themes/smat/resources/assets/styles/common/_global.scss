@@ -12,3 +12,16 @@ body {
     font-family: $mainFont;
     color: $grey;
 }
+
+
+/** Basics rules */
+
+.done {
+    display: none !important;
+}
+.main {
+    padding-top: 96px;
+}
+img {
+    max-width: 100%;
+}

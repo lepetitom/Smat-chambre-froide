@@ -24,8 +24,8 @@
       @media (min-width: $tablet) { 
         display: none;
       }
-      nav{
-        display: block !important;
+      .close-menu {
+        display: none;
       }
       
       .burger-nav{
@@ -40,6 +40,9 @@
             li {
               a {
                 color: white;
+                &:hover {
+                  color: $blue;
+                }
               }
             }
           }
