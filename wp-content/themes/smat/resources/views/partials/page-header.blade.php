@@ -29,7 +29,9 @@
         <?php
         $image_header = get_sub_field( 'image_header' );
         if ( $image_header ) : ?>
-          <img src="<?php echo esc_url( $image_header['url'] ); ?>" alt="<?php echo esc_attr( $image_header['alt'] ); ?>" />
+          <div class="image-content">
+            <img src="<?php echo esc_url( $image_header['url'] ); ?>" alt="<?php echo esc_attr( $image_header['alt'] ); ?>" />
+          </div>
         <?php endif; ?>
       </div>
       
