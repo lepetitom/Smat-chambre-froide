@@ -79,5 +79,29 @@
                 }
             }
         }
+        .services {
+            .services-content {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: space-between;
+            }
+            .service {
+                display: flex;
+                max-width: 435px;
+                margin-bottom: 150px;
+                .service-image {
+                    width: 145px;
+                    height: 145px;
+                    min-width: 145px;
+                    min-height: 145px;
+                    display: flex;
+                    margin: 0 50px 0 0;
+                    img {
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
     }
 }
