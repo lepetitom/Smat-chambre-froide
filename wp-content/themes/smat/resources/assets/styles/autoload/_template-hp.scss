@@ -11,6 +11,7 @@
                 display: block;
                 height: 80vh;
                 max-height: 600px;
+                margin-bottom: 150px;
             }
             .header-content {
                 position: absolute;
@@ -85,11 +86,20 @@
                 flex-wrap: wrap;
                 width: 100%;
                 justify-content: space-between;
+                @media (min-width:730px) and (max-width: 1080px) {
+                    justify-content: space-around;
+                }
             }
             .service {
                 display: flex;
                 max-width: 435px;
                 margin-bottom: 150px;
+                @media (max-width: $tablet) {
+                    margin-bottom: 100px;
+                }
+                @media (max-width: $mobile) {
+                    margin-bottom: 75px;
+                }
                 .service-image {
                     width: 145px;
                     height: 145px;
@@ -101,6 +111,27 @@
                         object-fit: cover;
                     }
                 }
+                @media (max-width: $widescreen) {
+                    max-width: 350px;
+                    .service-image {
+                        width: 100px;
+                        height: 100px;
+                        min-width: 100px;
+                        min-height: 100px;
+                        margin: 0 25px 0 0;
+                    }
+                }
+                @media (max-width: $mobile) {
+                    max-width: 435px;
+                    .service-image {
+                        width: 100px;
+                        height: 100px;
+                        min-width: 100px;
+                        min-height: 100px;
+                        margin: 0 25px 0 0;
+                    }
+                }
+            
             }
         }
     }
