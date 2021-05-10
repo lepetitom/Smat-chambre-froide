@@ -132,47 +132,55 @@
                     <?php endif; ?>
                 </div>
             </div>
-
-	<?php endwhile; ?>
-<?php endif; ?>
-</div>
-
-<div class="image-about">
-    <?php
-        $image_de_fond_about = get_field( 'image_de_fond_about' );
-        if ( $image_de_fond_about ) : ?>
-            <img src="<?php echo esc_url( $image_de_fond_about['url'] ); ?>" alt="<?php echo esc_attr( $image_de_fond_about['alt'] ); ?>" />
+        </div>                
+        <?php endwhile; ?>
     <?php endif; ?>
 </div>
 
-<div class="about-content">
-    <?php if ( $titre_a_propos = get_field( 'titre_a_propos' ) ) : ?>
-        <h2><?php echo esc_html( $titre_a_propos ); ?></h2>
-    <?php endif; ?>
-    <div class="paragraphes-about">
-        <div class="paragraphe">
-            <?php if ( $paragraphe_1 = get_field( 'paragraphe_1' ) ) : ?>
-                <?php echo $paragraphe_1; ?>
-            <?php endif; ?>
-        </div>      
-        <div class="paragraphe">
-            <?php if ( $paragraphe_2 = get_field( 'paragraphe_2' ) ) : ?>
-                <?php echo $paragraphe_2; ?>
-            <?php endif; ?>
-        </div>      
-        <div class="paragraphe">
-            <?php if ( $paragraphe_3 = get_field( 'paragraphe_3' ) ) : ?>
-                <?php echo $paragraphe_3; ?>
-            <?php endif; ?>
-            <?php
-            $link = get_field( 'bouton' );
-            if ( $link ) :
-                $link_url = $link['url'];
-                $link_title = $link['title'];
-                $link_target = $link['target'] ? $link['target'] : '_self';
-                ?>
-                <a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-            <?php endif; ?>
-        </div>      
+
+
+<!-- Bloc qui permet d'avoir le fond gris -->
+<div class="second-part">
+
+    <div class="image-about">
+        <?php
+            $image_de_fond_about = get_field( 'image_de_fond_about' );
+            if ( $image_de_fond_about ) : ?>
+                <img src="<?php echo esc_url( $image_de_fond_about['url'] ); ?>" alt="<?php echo esc_attr( $image_de_fond_about['alt'] ); ?>" />
+        <?php endif; ?>
     </div>
+
+
+    <div class="about-content">
+        <?php if ( $titre_a_propos = get_field( 'titre_a_propos' ) ) : ?>
+            <h2><?php echo esc_html( $titre_a_propos ); ?></h2>
+        <?php endif; ?>
+        <div class="paragraphes-about">
+            <div class="paragraphe">
+                <?php if ( $paragraphe_1 = get_field( 'paragraphe_1' ) ) : ?>
+                    <?php echo $paragraphe_1; ?>
+                <?php endif; ?>
+            </div>      
+            <div class="paragraphe">
+                <?php if ( $paragraphe_2 = get_field( 'paragraphe_2' ) ) : ?>
+                    <?php echo $paragraphe_2; ?>
+                <?php endif; ?>
+            </div>      
+            <div class="paragraphe">
+                <?php if ( $paragraphe_3 = get_field( 'paragraphe_3' ) ) : ?>
+                    <?php echo $paragraphe_3; ?>
+                <?php endif; ?>
+                <?php
+                $link = get_field( 'bouton' );
+                if ( $link ) :
+                    $link_url = $link['url'];
+                    $link_title = $link['title'];
+                    $link_target = $link['target'] ? $link['target'] : '_self';
+                    ?>
+                    <a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                <?php endif; ?>
+            </div>      
+        </div>
+    </div>
+
 </div>

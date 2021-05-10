@@ -141,25 +141,63 @@
             max-height: 896px;
             position: absolute;
             left: 0;
+            img {
+                min-width: 100%;
+            }
         } 
         .about-content {
-            margin: 300px auto 0;
+            margin: 300px auto 100px;
             position: absolute;
             top: 0px;
             z-index: 1000;
-            padding: 60px 60px 60px 80px;
+            padding: 60px 60px 80px;
             position: relative;
             background-color: $white;
             max-width: 1285px;
+            @media (max-width: $laptop) {
+                margin-top: 150px;
+            }
+            @media (max-width: $tablet) {
+                margin-top: 100px;
+            }
+            @media (max-width: $mobile) {
+                margin-top: 50px;
+                padding: 30px 30px 40px;
+            }
             .paragraphes-about {
                 display: flex;
                 justify-content: space-between;
                 .paragraphe {
                     max-width: 340px;
+                    width: calc(33% - 30px);
+                    &:last-child {
+                        p {
+                            margin-bottom: 50px;
+                        }
+                    }
                     .button {
                         margin-top: 30px;
                     }
                 }
+                @media (max-width: $tablet) {
+                    display: block;
+                    .paragraphe {
+                        max-width: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .second-part {
+            background-color: $bgGrey;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            padding-left: 50px;
+            padding-right: 50px;
+            @media (max-width: $mobile) {
+                padding-left: 20px;
+                padding-right: 20px;
             }
         }
     }
