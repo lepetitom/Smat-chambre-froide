@@ -1,7 +1,7 @@
 @php the_content() @endphp
 {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
 <div class="services">
-
+    <div id="box"></div>
     <?php if ( have_rows( 'services' ) ) : ?>
 	<?php while ( have_rows( 'services' ) ) :
 		the_row(); ?>
@@ -180,6 +180,150 @@
                     <a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
                 <?php endif; ?>
             </div>      
+        </div>
+    </div>
+
+    <div class="nos-realisations container">
+        <div class="intro-realisations">
+            <h2>
+                <?php if ( $titre_nos_realisations = get_field( 'titre_nos_realisations' ) ) : ?>
+                    <?php echo esc_html( $titre_nos_realisations ); ?>
+                <?php endif; ?>
+            </h2>
+            <p>
+                <?php if ( $texte_dintroduction = get_field( 'texte_dintroduction' ) ) : ?>
+                    <?php echo esc_html( $texte_dintroduction ); ?>
+                <?php endif; ?>
+            </p>
+        </div>
+        
+        
+    </div>
+    
+    <div class="realisations-content">
+        <div class="slider-line">
+            <div class="item">
+                
+                <?php
+                $image_1_slide_1 = get_field( 'image_1_slide_1' );
+                if ( $image_1_slide_1 ) : ?>
+                    <img src="<?php echo esc_url( $image_1_slide_1['url'] ); ?>" alt="<?php echo esc_attr( $image_1_slide_1['alt'] ); ?>" />
+                <?php endif; ?>
+            </div>
+            
+            <div class="item">
+                <?php
+                $image_2_slide_1 = get_field( 'image_2_slide_1' );
+                if ( $image_2_slide_1 ) : ?>
+                    <img src="<?php echo esc_url( $image_2_slide_1['url'] ); ?>" alt="<?php echo esc_attr( $image_2_slide_1['alt'] ); ?>" />
+                <?php endif; ?>
+            </div>
+            
+            <div class="item">
+                <?php
+                $image_3_slide_1 = get_field( 'image_3_slide_1' );
+                if ( $image_3_slide_1 ) : ?>
+                    <img src="<?php echo esc_url( $image_3_slide_1['url'] ); ?>" alt="<?php echo esc_attr( $image_3_slide_1['alt'] ); ?>" />
+                <?php endif; ?>
+            </div>
+
+            <div class="item">
+                <?php
+                $image_4_slide_1 = get_field( 'image_4_slide_1' );
+                if ( $image_4_slide_1 ) : ?>
+                    <img src="<?php echo esc_url( $image_4_slide_1['url'] ); ?>" alt="<?php echo esc_attr( $image_4_slide_1['alt'] ); ?>" />
+                <?php endif; ?>
+            </div>
+            
+            <div class="item">
+                <?php
+                $image_5_slide_1 = get_field( 'image_5_slide_1' );
+                if ( $image_5_slide_1 ) : ?>
+                    <img src="<?php echo esc_url( $image_5_slide_1['url'] ); ?>" alt="<?php echo esc_attr( $image_5_slide_1['alt'] ); ?>" />
+                <?php endif; ?>
+            </div>
+        </div>
+        <div class="slider-line-2" dir="rtl">
+            <div class="item">
+                <?php
+                $image_1_slide_2 = get_field( 'image_1_slide_2' );
+                if ( $image_1_slide_2 ) : ?>
+                    <img src="<?php echo esc_url( $image_1_slide_2['url'] ); ?>" alt="<?php echo esc_attr( $image_1_slide_2['alt'] ); ?>" />
+                <?php endif; ?>
+            </div>
+            
+            <div class="item">
+                <?php
+                $image_2_slide_2 = get_field( 'image_2_slide_2' );
+                if ( $image_2_slide_2 ) : ?>
+                    <img src="<?php echo esc_url( $image_2_slide_2['url'] ); ?>" alt="<?php echo esc_attr( $image_2_slide_2['alt'] ); ?>" />
+                <?php endif; ?>
+            </div>
+            
+            <div class="item">
+                <?php
+                $image_3_slide_2 = get_field( 'image_3_slide_2' );
+                if ( $image_3_slide_2 ) : ?>
+                    <img src="<?php echo esc_url( $image_3_slide_2['url'] ); ?>" alt="<?php echo esc_attr( $image_3_slide_2['alt'] ); ?>" />
+                <?php endif; ?>
+            </div>
+
+            <div class="item">
+                <?php
+                $image_4_slide_2 = get_field( 'image_4_slide_2' );
+                if ( $image_4_slide_2 ) : ?>
+                    <img src="<?php echo esc_url( $image_4_slide_2['url'] ); ?>" alt="<?php echo esc_attr( $image_4_slide_2['alt'] ); ?>" />
+                <?php endif; ?>
+            </div>
+            
+            <div class="item">
+                <?php
+                $image_5_slide_2 = get_field( 'image_5_slide_2' );
+                if ( $image_5_slide_2 ) : ?>
+                    <img src="<?php echo esc_url( $image_5_slide_2['url'] ); ?>" alt="<?php echo esc_attr( $image_5_slide_2['alt'] ); ?>" />
+                <?php endif; ?>
+            </div>
+        </div>
+        <div class="slider-line">
+            <div class="item">
+                <?php
+                $image_1_slide_3 = get_field( 'image_1_slide_3' );
+                if ( $image_1_slide_3 ) : ?>
+                    <img src="<?php echo esc_url( $image_1_slide_3['url'] ); ?>" alt="<?php echo esc_attr( $image_1_slide_3['alt'] ); ?>" />
+                <?php endif; ?>
+            </div>
+            
+            <div class="item">
+                <?php
+                $image_2_slide_3 = get_field( 'image_2_slide_3' );
+                if ( $image_2_slide_3 ) : ?>
+                    <img src="<?php echo esc_url( $image_2_slide_3['url'] ); ?>" alt="<?php echo esc_attr( $image_2_slide_3['alt'] ); ?>" />
+                <?php endif; ?>
+            </div>
+            
+            <div class="item">
+                <?php
+                $image_3_slide_3 = get_field( 'image_3_slide_3' );
+                if ( $image_3_slide_3 ) : ?>
+                    <img src="<?php echo esc_url( $image_3_slide_3['url'] ); ?>" alt="<?php echo esc_attr( $image_3_slide_3['alt'] ); ?>" />
+                <?php endif; ?>
+            </div>
+
+            <div class="item">
+                <?php
+                $image_4_slide_3 = get_field( 'image_4_slide_3' );
+                if ( $image_4_slide_3 ) : ?>
+                    <img src="<?php echo esc_url( $image_4_slide_3['url'] ); ?>" alt="<?php echo esc_attr( $image_4_slide_3['alt'] ); ?>" />
+                <?php endif; ?>
+            </div>
+            
+            <div class="item">
+                <?php
+                $image_5_slide_3 = get_field( 'image_5_slide_3' );
+                if ( $image_5_slide_3 ) : ?>
+                    <img src="<?php echo esc_url( $image_5_slide_3['url'] ); ?>" alt="<?php echo esc_attr( $image_5_slide_3['alt'] ); ?>" />
+                <?php endif; ?>
+            </div>
         </div>
     </div>
 

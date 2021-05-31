@@ -90,3 +90,15 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
+
+
+
+//========================
+// A-1 ADD OPTION PAGE ACF
+//========================
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}
