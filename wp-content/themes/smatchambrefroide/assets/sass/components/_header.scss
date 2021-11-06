@@ -1,0 +1,136 @@
+header {
+    height: $menuHeight;
+    position: relative;
+    .container {
+        z-index: 100;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        background-color: $white;
+        .menu {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            z-index: 110;
+            position: relative;
+            img {
+                margin-bottom: 10px;
+            }
+            nav {
+                border-bottom: 1px solid $grey;
+                display: flex;
+                align-items: center;
+                font-family: 'Montserrat', sans-serif;
+                ul {
+                    justify-content: space-between;
+                    display: flex;
+                    width: 750px;
+                }
+                li {
+                    @media screen and (max-width: $desktop) {
+                        font-size: 16px;
+                    }
+                    &:hover {
+                        background-color: $lightGrey;
+                    }
+                    &:first-child {
+                        margin-left: 0px;
+                    }
+                    a {
+                        text-decoration: none;
+                        font-size: 20px;
+                        color: $grey;
+                        &:hover {
+                            color: $bleu;
+                        }
+                    }
+                }
+            }
+            .desk-header {
+                @media screen and (max-width: $tablet ) {
+                    display: none;
+                }
+            }
+            .burger-icon {
+                width: 50px;
+                height: 33px;
+                display: none;
+                margin: auto 0;
+                z-index: 110;
+                transition: all 0.25s ease;
+                @media screen and (max-width: $tablet ) {
+                    display: block;
+                }
+                position: relative;
+                div {
+                    height: 1px;
+                    background-color: $grey;
+                    width: 50px;
+                    transition: all 0.25s ease;
+                    position: relative;
+                }
+                div:first-child {
+                    top: 0%;
+                    position: absolute;
+                }
+                div:nth-child(2) {
+                    top: 50%;
+                    position: absolute;
+                }
+                div:last-child {
+                    top: 100%;
+                    position: absolute;
+                }
+            }
+            .activeburger {
+                position: relative;
+                transform: rotate(180deg);
+                div:first-child {
+                    transform: rotate(45deg);
+                    top: 50%;
+                    right: 0px;
+                    position: absolute;
+                }
+                div:nth-child(2) {
+                    opacity: 0;
+                }
+                div:last-child {
+                    transform: rotate(-45deg);
+                    top: 50%;
+                    right: 0px;
+                    position: absolute;
+                }
+            }
+        }
+    }
+    .mobile-header {
+        position: fixed;
+        right: 0px;
+        width: 100vw;
+        background-color: $white;
+        z-index: 99;
+        padding: 50px 0;
+        top: $menuHeight;
+        transform: translateY(-100%);
+        transition: all 1s ease;
+        ul {
+            display: flex;
+            flex-direction: column;
+            li {
+                a {
+                    font-size: 30px;
+                    color: $bleu;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .active {
+        top: $menuHeight;
+        transform: translateY(0%);
+    }
+}

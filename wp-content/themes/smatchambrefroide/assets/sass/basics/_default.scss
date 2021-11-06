@@ -1,0 +1,17 @@
+body {
+    width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    .container {
+        width: 100%;
+        max-width: 1720px;
+        margin: 0 auto;
+        position: relative;
+        @media screen and (max-width: $widescreen) {
+            max-width: 90%;
+        }
+    }
+}
+
+.active {
+    display: block !important;
+}
