@@ -41,6 +41,26 @@
     }
     add_action( 'after_setup_theme', 'register_my_menu' );
     
+
+    // -----
+    // Page d'option
+    // -----
+    
+    // P1 - Footer page
+    // Pages d'options
+    if( function_exists( 'acf_add_options_page' ) ) {
+        
+        acf_add_options_page( array(
+            'page_title' 	=> 'Réglages Footer',
+            'menu_title'	=> 'Footer',
+            'menu_slug' 	=> 'theme-footer-settings',
+            'position'    	=> 2
+        ) );
+        
+        
+        
+    }
+    
     // --------------------
     // Post, CPT, Taxonomie
     // --------------------
