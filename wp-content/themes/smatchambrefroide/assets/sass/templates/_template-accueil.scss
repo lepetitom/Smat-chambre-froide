@@ -6,7 +6,6 @@
         height: 700px;
         margin-top: 150px;
         position: relative;
-        margin-bottom: 200px;
         overflow: hidden;
         @media screen and (max-width: $laptop) {
             height: 550px;
@@ -16,7 +15,6 @@
             align-items: flex-end;
             margin-top: 100px;
             min-height: 400px;
-            margin-bottom: 100px;
         }
         @media screen and (max-width: $mobile) {
             margin-top: 50px;
@@ -54,8 +52,12 @@
         }
     }
     .services {
+        padding-top: 200px;
+        @media screen and (max-width: $tablet) {
+            padding-top: 100px;
+        }
         h2{
-            margin-bottom: 200px;
+            margin-bottom: 100px;
             @media screen and (max-width: $mobile) {
                 margin-bottom: 50px;
             }
@@ -116,11 +118,15 @@
         }
         .container {
             padding-top: 200px;
+            @media screen and (max-width: $tablet) {
+                padding-top: 100px;
+            }
             .content {
                 background-color: white;
                 padding: 50px;
                 @media screen and (max-width: $mobile) {
                     padding: 25px;
+                    padding-bottom: 50px;
                 }
                 h2 {
                     max-width: 900px;
@@ -166,12 +172,29 @@
         background-color: $lightGrey;
         padding-top: 200px;
         padding-bottom: 200px;
+        @media screen and (max-width: $tablet) {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
         .content {
             display: flex;
             justify-content: space-between;
             margin-bottom: 100px;
             p {
                 width: 700px;
+            }
+            @media screen and (max-width: $desktop) {
+                p {
+                    width: 500px;
+                }
+            }
+            @media screen and (max-width: $tablet) {
+                flex-direction: column;
+                P {
+                    margin-top: 30px;
+                    max-width: 100%;
+                }
+                margin-bottom: 25px;
             }
         }
         .sliders{
@@ -192,6 +215,12 @@
                     left: -100% !important;
                     position: absolute;
                     bottom: 0px;
+                    @media screen and (max-width: $tablet) {
+                        left: -200% !important;
+                    }
+                    @media screen and (max-width: $mobile) {
+                        left: -400% !important;
+                    }
                 }
                 &:hover {
                     animation-play-state: paused;

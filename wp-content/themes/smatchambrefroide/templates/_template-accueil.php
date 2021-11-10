@@ -46,7 +46,7 @@ get_header(); ?>
     =================================
     HOME HEADER
     -->
-    <div class="container services">
+    <div class="container services" id="services">
         <?php if ( have_rows( 'services' ) ) : ?>
             <?php while ( have_rows( 'services' ) ) :
                 the_row(); ?>
@@ -98,7 +98,7 @@ get_header(); ?>
     =================================
     A PROPOS
     -->
-    <div class="a-propos">
+    <div class="a-propos" id="a-propos">
         <img src="<?php echo theme_url; ?>/assets/img/a-propos.jpg" alt="">
         <div class="container">
             <div class="content">
@@ -148,7 +148,7 @@ get_header(); ?>
     =================================
     REALISATION
     -->
-    <div class="realisations">
+    <div class="realisations" id="realisation">
         <?php if ( have_rows( 'realisations' ) ) : ?>
             <?php while ( have_rows( 'realisations' ) ) :
                     the_row(); ?>

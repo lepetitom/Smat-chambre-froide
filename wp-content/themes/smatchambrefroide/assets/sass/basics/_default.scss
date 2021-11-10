@@ -1,6 +1,11 @@
 .page {
     width: 100%;
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    .index {
+        margin: 100px 0;
+    }
     #main {
         margin-top: $menuHeight;
     }
@@ -37,3 +42,6 @@
     display: block !important;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
